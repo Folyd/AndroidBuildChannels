@@ -1,7 +1,7 @@
 ##Android Build Channels
 
 ####Basic usage
-1. Add android channel to **channels.txt** file.
+1. Add android channel to [**channel.txt**](https://github.com/Folyd/AndroidBuildChannels/blob/master/channel.txt) file.
 
 2. `python build_channel.py your_apk_file`
 
