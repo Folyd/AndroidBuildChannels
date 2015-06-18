@@ -11,8 +11,8 @@ def write_channel_to_apk(apkfile, channel):
 
 def build():
     if len(sys.argv) < 2:
-        print '---- must specify a apk file'
-        raise
+        raise SystemError("must specify a apk file")
+
     apk = sys.argv[1]
     print '----apk name is %s ----' % apk
     version = raw_input('please input current version code:')
