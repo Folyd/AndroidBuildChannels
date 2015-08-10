@@ -41,6 +41,7 @@ def build():
             count += 1
 
     print '----finish build channels, channel count=%d----' % count
+    os.system('rm %s' % emptyFile)
 
 if __name__ == "__main__":
     build()
