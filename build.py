@@ -13,7 +13,11 @@ def build():
     if len(sys.argv) < 2:
         raise SystemError("must specify a apk file")
 
+    if len(sys.argv) < 3:
+        raise SystemError("must specify a channel list file")
+
     apk = sys.argv[1]
+    channels = sys.argv[2]
     print '----apk name is %s ----' % apk
     version = raw_input('please input current version code:')
     print '----start build channels----'
@@ -22,7 +26,7 @@ def build():
         os.system('touch %s' % emptyFile)
         # os.mknod(emptyFile)
 
-    dest = 'channels'
+    dest = 'channels-%s-%s' % (apk,version)
     if not os.path.exists(dest):
         os.mkdir(dest)
 
